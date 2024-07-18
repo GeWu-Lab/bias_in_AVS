@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="MM">
+  <meta property="og:title" content="ACMMM2024"/>
+  <meta property="og:description" content="Unveiling and Mitigating Bias in Audio Visual Segmentation"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Bias in AVS</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Unveiling and Mitigating Bias in Audio Visual Segmentation</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+                <span class="author-block">
+                  <a href="https://peiwensun2000.github.io/" target="_blank">Peiwen Sun</a><sup>1</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://teacher.bupt.edu.cn/zhanghonggang/en/jsxx/40467/jsxx/jsxx.htm" target="_blank">Honggang Zhang</a><sup>1</sup>,</span>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://dtaoo.github.io/" target="_blank">Di Hu</a><sup>2*</sup>,
+                  </span>
+                  
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>Beijing University of Posts and Telecommunications,
+                      <br><sup>2</sup>Gaoling School of Artificial Intelligence, Renmin University of China, China,
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Corresponding Author.</small></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="static/pdfs/09290.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <span class="link-block">
+                      <a href="static/pdfs/09290-supp.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/GeWu-Lab/bias_in_AVS" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2407.11820" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="item">
+        <img src="static/images/real_teaser.png" alt="MY ALT TEXT" width="50%"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- End paper abstract -->
+<section class="section">
+  <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+              <h2 class="title is-3">Abstract</h2>
+              <div class="content has-text-justified">
+                <p>
+                  Community researchers have developed a range of advanced audio-visual segmentation models aimed at improving the quality of sounding objects' masks.
+                  While masks created by these models may <b>initially appear plausible</b>, they occasionally exhibit anomalies with <b>incorrect grounding logic</b>.
+                  We attribute this to real-world inherent preferences and distributions as a simpler signal for learning than the complex audio-visual grounding, which leads to the disregard of important modality information.
+                  Generally, the anomalous phenomena are often complex and cannot be directly observed systematically.
+                  In this study, we made a pioneering effort with the proper synthetic data to categorize and analyze phenomena as two types <b>“audio priming bias”</b> and <b>“visual prior”</b> according to the source of anomalies.
+                  For audio priming bias, to enhance audio sensitivity to different intensities and semantics, a perception module specifically for audio perceives the latent semantic information and incorporates information into a limited set of queries, namely active queries. 
+                  Moreover, the interaction mechanism related to such active queries in the transformer decoder is customized to adapt to the need for interaction regulating among audio semantics.
+                  For visual prior, multiple contrastive training strategies are explored to optimize the model by incorporating a biased branch, without even changing the structure of the model.
+                  During experiments, observation demonstrates the presence and the impact that has been produced by the biases of the existing model.
+                  Finally, through experimental evaluation of AVS benchmarks, we demonstrate the effectiveness of our methods in handling both types of biases, achieving competitive performance across all three subsets.
+                </p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+      <div class="hero-body">
+          <h2 class="title is-3 has-text-centered">Problem and Analysis</h2>
+          <div style="text-align: center;">
+            <img src="static/images/audio_priming_bias.png" alt="MY ALT TEXT" width="90%"/>
+          </div>
+          <br><br>
+          <h2 class="subtitle has-text-justified">
+              <p> 
+                <b>Audio priming bias</b>: The phenomenon that the model tends to focus on audio salient content but not whole content is called “audio priming bias"”. 
+                <p>
+                  <ol>
+                    <li>Audio with different intensities demonstrates varying guiding capability, as shown in the green block.</li>
+                    <li>When controlling other variables including volume, we can observe a clear variance of the guiding capability by different semantics through the box plot.</li>
+                    <li>In cases where multiple audios are simultaneously present, the overlaying of audio does not always lead to separate related masks being superimposed.</li>
+                  </ol>
+                </p>
+              </p>
+              <p> 
+                <b>Visual prior</b>: The phenomenon that the model may directly segment the common-sounding objects is called “visual prior”.
+                <ol>
+                  <li>Statistically, the occurrence frequency the sounding probability between different semantics are imbalanced in the dataset.</li>
+                  <li>Such preference and distribution provide strong prior information and make the model inclined to obtain statistically plausible results, rather than achieving the desired challenging grounding behavior.</li>
+                </ol>
+                
+              </p>
+          </h2>
+      </div>
+  </div>
+
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <h2 class="title is-3 has-text-centered">Method</h2>
+        <h2 class="subtitle has-text-justified">
+          <p> 
+            The mitigation of audio priming bias requires an enhancing mechanism in the transformer decoder, while the mitigation of visual prior requires distribution reorganization after acquiring the logits.
+          </p>
+      </h2>
+        <div style="text-align: center;">
+          <img src="static/images/pipeline.png" alt="MY ALT TEXT" width="30%"/>
+        </div>
+        <br><br>
+        <h2 class="subtitle has-text-justified">
+            <p> 
+              On one hand, to enhance the audio sensitivity and cooperation of different intensity and semantic attributes, we introduce the semantic-aware active queries utilizing a perception module and interaction enhancement mechanism.
+            </p>
+        </h2>
+        <img src="static/images/visual_prior.png" alt="MY ALT TEXT" width="100%"/>
+        <br><br>
+        <h2 class="subtitle has-text-justified">
+            <p> 
+              On the other hand, multiple training strategies are explored to contrastively optimize the debias model and reorganize the logits without modifying the structure.
+            </p>
+        </h2>
+    </div>
+</div>
+
+
+  <style>
+    ol {
+      margin-left: 0;
+      padding-left: 20px;
+    }
+  
+    ol ol {
+      margin-left: 20px;
+    }
+  </style>
+
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+      <div class="hero-body">
+          <h2 class="title is-3 has-text-centered">Quantitative Comparision</h2>
+          <img src="static/images/results.png" alt="MY ALT TEXT"/>
+          <br><br>
+          <h2 class="subtitle has-text-justified">
+              <p> Quantitative (mIoU, F-score) results on AVSBench benchmarks with transformer-based visual backbone. </p>
+          </h2>
+      </div>
+  </div>
+</section>
+<style>
+  .carousel {
+    display: flex;
+    justify-content: center; /* ˮƽ���� */
+    align-items: center; /* ��ֱ���� */
+  }
+  .item {
+    text-align: center; /* ȷ��ͼƬ�������������ھ��� */
+  }
+</style>
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <h2 class="title is-3 has-text-centered">Qualitative Comparision</h2>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <img src="static/images/s4.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison with previous methods on S4 subtask.
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/ms3.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison with previous methods on MS3 subtask.
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/v2.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison with previous methods on AVSS subtask.
+       </h2>
+     </div>
+  </div>
+  <p> Video cases will be updated soon. </p>
+</div>
+</div>
+</section> -->
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Pdf</h2>
+
+      <iframe  src="static/pdfs/09290.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{sun2024unveiling,
+        title={Unveiling and Mitigating Bias in Audio Visual Segmentation},
+        author={Sun, Peiwen and Zhang, Honggang and Hu, Di},
+        journal={Proceedings of the 32th ACM International Conference on Multimedia (ACM MM)},
+        year={2024},
+       }</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
