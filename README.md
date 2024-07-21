@@ -62,6 +62,8 @@ cd AVS
 sh 
 ~~~
 
+**Note**: Before getting into debias strategy, the vanilla model needs to reach adequate performance instead of from pure scratch.
+
 ### Testing
 Normally, just like the former works, test can be done during training. However, we still are able to make small changes on the training code. For example, comment out the training part and the remaining part is just testing.
 
@@ -69,6 +71,11 @@ Normally, just like the former works, test can be done during training. However,
 ### Download checkpoints
 
 We also provide pre-trained models for all three subtasks. You can download them from the [following links]().
+
+### A few discussions and tips for experiments
+
+1. The contrastive debias strategy requires SMALLER learning rate than the original learning rate to reach adequate performance.
+2. Since the active queries requires the clustering and classification depended on the dataset distribution, we have tested the unseen performance on AVS-V3 in GAVS, which is proven limited.
 
 ## Citation
 If you find this work useful, please consider citing it.
