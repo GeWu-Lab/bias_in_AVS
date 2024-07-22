@@ -50,18 +50,38 @@ Note: v1s is also known as S4, and v1m is also known as MS3. The AVSBench benchm
 
 We use Mask2Former model with Swin-B pre-trained on ADE20k as the backbone, which can be downloaded in this [link](https://drive.google.com/file/d/15wI-2M3Cfovl6oNTvBSQfDYKf5FmqooD/view?usp=drive_link). Don't forget to modify the `placeholder` in python files to your own path.
 
-Our well trained model can be downloaded in this [link](https://drive.google.com/placeholder). Don't forget to modify the `placeholder` in Python files to your own path.
+Our well trained model can be downloaded in this [link](https://drive.google.com/drive/folders/16IkrIQGQS9yfdXso_8y-GXZ7qwtLFKC7?usp=share_link). Don't forget to modify the `placeholder` in Python files to your own path.
+
+### Audio pretransform
+   Audio clustering follows the HuBERT clustering pipeline in [github](https://github.com/bshall/hubert)
+   Audio classification follows the BETAS pipeline in [github](https://github.com/microsoft/unilm/tree/master/beats)
+   Save the cluster or class information in `pkl`
+   As an example,
+   ```
+   |--preprocess/classification_avs/threshold_0.4
+      |--V9JdDs7RK3c_1.pth
+         |-- torch.Tensor(7, 21)
+      |--...
+
+   |--preprocess/classification_avs/threshold_0.4
+      |--A7N2Japi3-A_5.pth
+         |-- torch.Tensor(7, 45, 51)
+      |--...
+   ```
+   We encourage the researchers to extract the clustering and classification information.
 
 ### Training
 For S4 and MS3 subtasks, you can simply modify config in python files and replace the `pkl` path of pre-transform of clustering or classification:  
 ~~~shell
 cd AVS
-sh 
+sh run_avs_m2f.sh # for training
+sh run_avs_m2f_test.sh # for testing
 ~~~
 For AVSS subtask, the procedure is basically the same,
 ~~~shell
-cd AVS
-sh 
+cd AVSS
+sh run.sh # for training
+sh run_test.sh # for testing
 ~~~
 
 **Note**: Before getting into debias strategy, the vanilla model needs to reach adequate performance instead of from pure scratch.
@@ -78,6 +98,7 @@ We also provide pre-trained models for all three subtasks. You can download them
 
 1. The contrastive debias strategy requires SMALLER learning rate than the original learning rate to reach adequate performance.
 2. Since the active queries requires the clustering and classification depended on the dataset distribution, we have tested the unseen performance on AVS-V3 in GAVS, which is proven limited.
+3. The debias strategy costs nearly 2x FLOPs and 1.5x training time. However, the bias it deals with still worth it.
 
 ## Citation
 If you find this work useful, please consider citing it.
@@ -91,3 +112,28 @@ If you find this work useful, please consider citing it.
  }
 ~~~
 
+
+Note: Replace all placeholders with your own paths.
+
+## Run
+
+For AVS in v1s and v1m
+
+```
+cd AVS
+sh run_avs_m2f.sh # for training
+sh run_avs_m2f_test.sh # for testing
+```
+
+For AVSS in v2
+
+```
+cd AVSs
+sh run.sh # for training
+sh run_test.sh # for testing
+```
+
+## Thanks
+
+* Part of the code is adapted from transformers
+* Part of the code is adapted from GAVS by Yaoting Wang
