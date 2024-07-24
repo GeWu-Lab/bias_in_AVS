@@ -9,9 +9,9 @@ Official repository for "Unveiling and Mitigating Bias in Audio Visual Segmentat
 
 🚀: Project page here: [Project Page](https://gewu-lab.github.io/bias_in_AVS/)
 
-📄: Paper here: [Paper](https://arxiv.org/placeholder)
+📄: Paper here: [Paper](https://arxiv.org/abs/2407.16638)
 
-🔍: Supplementary material: [Supplementary](https://arxiv.org/placeholder)
+🔍: Supplementary material: [Supplementary](https://arxiv.org/abs/2407.16638)
 ## Abstract
 ACommunity researchers have developed a range of advanced audio-visual segmentation models aimed at improving the quality of sounding objects' masks. While masks created by these models may **initially appear plausible**, they occasionally exhibit anomalies with **incorrect grounding logic**. We attribute this to real-world inherent preferences and distributions as a simpler signal for learning than the complex audio-visual grounding, which leads to the disregard of important modality information. Generally, the anomalous phenomena are often complex and cannot be directly observed systematically. In this study, we made a pioneering effort with the proper synthetic data to categorize and analyze phenomena as two types **“audio priming bias”** and **“visual prior”** according to the source of anomalies. For audio priming bias, to enhance audio sensitivity to different intensities and semantics, a perception module specifically for audio perceives the latent semantic information and incorporates information into a limited set of queries, namely active queries. Moreover, the interaction mechanism related to such active queries in the transformer decoder is customized to adapt to the need for interaction regulating among audio semantics. For visual prior, multiple contrastive training strategies are explored to optimize the model by incorporating a biased branch, without even changing the structure of the model. During experiments, observation demonstrates the presence and the impact that has been produced by the biases of the existing model. Finally, through experimental evaluation of AVS benchmarks, we demonstrate the effectiveness of our methods in handling both types of biases, achieving competitive performance across all three subsets. [Page](https://gewu-lab.github.io/bias\_in\_AVS/)
 
