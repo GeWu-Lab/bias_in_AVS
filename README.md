@@ -48,7 +48,7 @@ Please refer to the link [AVSBenchmark](https://github.com/OpenNLPLab/AVSBench) 
 ```
 Note: v1s is also known as S4, and v1m is also known as MS3. The AVSBench benchmark is strictly followed.
 
-We use Mask2Former model with Swin-B pre-trained on ADE20k as the backbone, which can be downloaded in this [link](https://dl.fbaipublicfiles.com/maskformer/mask2former/ade20k/semantic/maskformer2_swin_base_IN21k_384_bs16_160k_res640/model_final_7e47bf.pkl) from [repo](https://github.com/facebookresearch/Mask2Former/blob/main/MODEL_ZOO.md). Don't forget to modify the `placeholder` in python files to your own path.
+We use Mask2Former model with Swin-B pre-trained on ADE20k as the backbone, which can be downloaded in this [link](https://huggingface.co/facebook/mask2former-swin-base-ade-semantic) from [repo](https://github.com/facebookresearch/Mask2Former/blob/main/MODEL_ZOO.md). Don't forget to modify the `placeholder` in python files to your own path.
 
 Our well trained model can be downloaded in this [link](https://drive.google.com/drive/folders/16IkrIQGQS9yfdXso_8y-GXZ7qwtLFKC7?usp=share_link). Don't forget to modify the `placeholder` in Python files to your own path.
 
