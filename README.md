@@ -126,7 +126,7 @@ The frequently asked questions through E-mail are updated here.
 2. The code of the classification and clustering?
     1. Since this framework is rather simple and straightfoward, the original implemetation of mine is implemented though `Jupyter`. Due to the relatively chaotic management of the memory pool and execution order of the Jupyter scripts, and I believe this is relatively easy to implement. So we encourage the community to implement it independently, and the subsequent loading only needs to maintain a consistent format.
 
-
+Apologies for some hard code in this repo. I will keep updating if necessary.
 
 ## Thanks
 
