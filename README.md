@@ -48,7 +48,7 @@ Please refer to the link [AVSBenchmark](https://github.com/OpenNLPLab/AVSBench) 
 ```
 Note: v1s is also known as S4, and v1m is also known as MS3. The AVSBench benchmark is strictly followed.
 
-We use Mask2Former model with Swin-B pre-trained on ADE20k as the backbone, which can be downloaded in this [link](https://drive.google.com/file/d/15wI-2M3Cfovl6oNTvBSQfDYKf5FmqooD/view?usp=drive_link). Don't forget to modify the `placeholder` in python files to your own path.
+We use Mask2Former model with Swin-B pre-trained on ADE20k as the backbone, which can be downloaded in this [link](https://dl.fbaipublicfiles.com/maskformer/mask2former/ade20k/semantic/maskformer2_swin_base_IN21k_384_bs16_160k_res640/model_final_7e47bf.pkl) from [repo](https://github.com/facebookresearch/Mask2Former/blob/main/MODEL_ZOO.md). Don't forget to modify the `placeholder` in python files to your own path.
 
 Our well trained model can be downloaded in this [link](https://drive.google.com/drive/folders/16IkrIQGQS9yfdXso_8y-GXZ7qwtLFKC7?usp=share_link). Don't forget to modify the `placeholder` in Python files to your own path.
 
@@ -71,6 +71,9 @@ Our well trained model can be downloaded in this [link](https://drive.google.com
    We encourage the researchers to extract the clustering and classification information.
 
 ### Training
+
+Note: Replace all placeholders with your own paths.
+
 For S4 and MS3 subtasks, you can simply modify config in python files and replace the `pkl` path of pre-transform of clustering or classification:  
 ~~~shell
 cd AVS
@@ -81,7 +84,7 @@ For AVSS subtask, the procedure is basically the same,
 ~~~shell
 cd AVSS
 sh run.sh # for training
-sh run_test.sh # for testing
+# sh run_test.sh # for testing you can simply comment out the training part of the code
 ~~~
 
 **Note**: Before getting into debias strategy, the vanilla model needs to reach adequate performance instead of from pure scratch.
@@ -105,33 +108,25 @@ If you find this work useful, please consider citing it.
 
 ~~~BibTeX
 @article{sun2024unveiling,
-          title={Unveiling and Mitigating Bias in Audio Visual Segmentation},
-          author={Sun, Peiwen and Zhang, Honggang and Hu, Di},
-          journal={Proceedings of the 32nd ACM International Conference on Multimedia (ACM MM)},
-          year={2024},
- }
+  title={Unveiling and Mitigating Bias in Audio Visual Segmentation},
+  author={Sun, Peiwen and Zhang, Honggang and Hu, Di},
+  journal={arXiv preprint arXiv:2407.16638},
+  year={2024}
+}
 ~~~
 
 
-Note: Replace all placeholders with your own paths.
 
-## Run
+## FAQ
+The frequently asked questions through E-mail are updated here.
 
-For AVS in v1s and v1m
+1. Why assign $C$ classes and $1$ cluster in Semantic-aware Active Queries?
+    1. The original audio tends to be multisourced in MS3 and AVSS.
+    2. The original clustering implementation in HuBERT assigns a single cluster to each time slot. This presents a problem of how to ensemble the clusters, and approaches such as voting and temporal pooling have been explored. However, in experiments, the behavior of assigning multiple clusters per audio seems strange and unstable. Personally, if the underlying clustering is more robust, the performance can be more stable.
+2. The code of the classification and clustering?
+    1. Since this framework is rather simple and straightfoward, the original implemetation of mine is implemented though `Jupyter`. Due to the relatively chaotic management of the memory pool and execution order of the Jupyter scripts, and I believe this is relatively easy to implement. So we encourage the community to implement it independently, and the subsequent loading only needs to maintain a consistent format.
 
-```
-cd AVS
-sh run_avs_m2f.sh # for training
-sh run_avs_m2f_test.sh # for testing
-```
 
-For AVSS in v2
-
-```
-cd AVSs
-sh run.sh # for training
-sh run_test.sh # for testing
-```
 
 ## Thanks
 
