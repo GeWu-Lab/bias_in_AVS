@@ -209,7 +209,7 @@ def run(model, device, ddpm=None):
             model.eval()
             # res = test(model, val_loader_epoch, optimizer, idx_ep, args, ddpm,save_mask="../place_holder/project/AVSS_m2f/test_all_mask/horse/")
             res = test(model, val_loader_epoch, optimizer, idx_ep, args, ddpm
-                       ,save_mask="../place_holder/project/AVSS_m2f/test_all_mask/queries_0/")
+                       ,save_mask=None)
             wandb.log(res)
             m_s.append(res["miou"])
             f_s.append(res["fscore"])
