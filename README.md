@@ -30,7 +30,7 @@ The overall training pipeline follows the list below.
 2. Audio pretransform
     * Audio clustering follows the HuBERT clustering pipeline in [github](https://github.com/bshall/hubert)
     * Audio classification follows the BETAS pipeline in [github](https://github.com/microsoft/unilm/tree/master/beats)
-    * Save the cluster or class information in `pkl`
+    * Save the cluster or class information in `pth`
 3. (Optional) When training AVSS dataset, we gradually add `v1s, v2, v1m` in the data pool. It brings minor benefits to the performance of a curriculum training strategy.
 4. Training the model with the debias strategy.
 5. Evaluating on AVS Benchmark.
@@ -55,7 +55,7 @@ Our well trained model can be downloaded in this [link](https://drive.google.com
 ### Audio pretransform
    Audio clustering follows the HuBERT clustering pipeline in [github](https://github.com/bshall/hubert)
    Audio classification follows the BETAS pipeline in [github](https://github.com/microsoft/unilm/tree/master/beats)
-   Save the cluster or class information in `pkl`
+   Save the cluster or class information in `pth`
    As an example,
    ```
    |--preprocess/classification_avs/threshold_0.4
@@ -74,7 +74,7 @@ Our well trained model can be downloaded in this [link](https://drive.google.com
 
 Note: Replace all placeholders with your own paths.
 
-For S4 and MS3 subtasks, you can simply modify config in python files and replace the `pkl` path of pre-transform of clustering or classification:  
+For S4 and MS3 subtasks, you can simply modify config in python files and replace the `pth` path of pre-transform of clustering or classification:  
 ~~~shell
 cd AVS
 sh run_avs_m2f.sh # for training
