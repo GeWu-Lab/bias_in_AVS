@@ -53,6 +53,9 @@ We use Mask2Former model with Swin-B pre-trained on ADE20k as the backbone, whic
 Our well trained model can be downloaded in this [link](https://drive.google.com/drive/folders/16IkrIQGQS9yfdXso_8y-GXZ7qwtLFKC7?usp=share_link). Don't forget to modify the `placeholder` in Python files to your own path.
 
 ### Audio pretransform
+
+Before everything, if you want to set all queries as active queries, simply use `torch.ones` in [here](https://github.com/GeWu-Lab/bias_in_AVS/blob/main/AVSS/models/avs_model.py#L105). And then skip the audio pretransform below.
+
    Audio clustering follows the HuBERT clustering pipeline in [github](https://github.com/bshall/hubert)
    Audio classification follows the BETAS pipeline in [github](https://github.com/microsoft/unilm/tree/master/beats)
    Save the cluster or class information in `pth`
